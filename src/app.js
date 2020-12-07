@@ -29,7 +29,7 @@ app.get('/subscribers/:id',(req,res)=>{
             res.send(doc);
         }
     }catch(err){
-        res.status(400),send({err.message: "Incorrect id format"});
+        res.status(400),send({message: err.message});
     }
 })
 
