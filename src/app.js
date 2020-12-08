@@ -18,7 +18,7 @@ app.get('/subscribers/names', async(req,res) => {
         }
     });
     res.send(mappedResults);*/
-    const projectedResults = await (SubscriberModel.find().select({
+    const projectedResults = await SubscriberModel.find().select({
     _id:false,
         subscribedDate:false,
         __v:false
